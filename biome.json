@@ -1,0 +1,65 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!**/dist",
+      "!**/node_modules",
+      "!**/.husky",
+      "!**/screenshot.mjs",
+      "!**/debug.mjs"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "recommended": true,
+        "noLabelWithoutControl": {
+          "level": "error",
+          "options": {
+            "inputComponents": ["Input", "Textarea"],
+            "labelAttributes": ["label", "aria-label", "aria-labelledby"],
+            "labelComponents": ["FieldLabel"]
+          }
+        }
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "double",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all"
+    }
+  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "css": {
+    "parser": {
+      "cssModules": false,
+      "allowWrongLineComments": false,
+      "tailwindDirectives": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+dist
+.idea
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+.npmrc
+!.npmrc.example
+tsconfig.tsbuildinfo
+.vercel
