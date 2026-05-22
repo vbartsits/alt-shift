@@ -14,7 +14,7 @@ export function GeneratorPage() {
         <GeneratorForm />
       </GeneratorProvider>
 
-      <ProgressBanner count={lettersCount} />
+      <ProgressBanner count={lettersCount} showCreateButton={false} />
     </Layout>
   )
 }

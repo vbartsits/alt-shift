@@ -7,9 +7,10 @@ import { ProgressPills } from '@/shared/ui/ProgressPills'
 
 interface ProgressBannerProps {
   count: number
+  showCreateButton?: boolean
 }
 
-export function ProgressBanner({ count }: ProgressBannerProps) {
+export function ProgressBanner({ count, showCreateButton = true }: ProgressBannerProps) {
   if (count >= GOAL) return null
 
   return (
@@ -25,10 +26,12 @@ export function ProgressBanner({ count }: ProgressBannerProps) {
           Generate and send out couple more job applications today to get hired faster
         </p>
 
-        <Button as={Link} to={ROUTES.generator} size="lg">
-          <PlusIcon size={24} />
-          Create New
-        </Button>
+        {showCreateButton && (
+          <Button as={Link} to={ROUTES.generator} size="lg">
+            <PlusIcon size={24} />
+            Create New
+          </Button>
+        )}
       </div>
 
       <div className="flex flex-col items-center gap-2">
