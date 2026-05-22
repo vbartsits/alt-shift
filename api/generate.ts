@@ -11,7 +11,7 @@ interface GenerateRequest {
   additionalDetails?: string
 }
 
-const MODEL = 'gemini-2.0-flash'
+const MODEL = process.env.GEMINI_MODEL ?? 'gemini-1.0-pro'
 
 // TODO (production): add rate limiting (e.g. Upstash/Vercel KV), request size limit,
 // server-side Zod validation, and structured error codes (RATE_LIMITED, INVALID_INPUT, etc.)
